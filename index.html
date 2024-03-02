@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de mèmes</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Générateur de mèmes 🖼️</h1>
+
+        <!-- Charge l'image -->
+        <form id="upload-form" enctype="multipart/form-data">
+            <div id="upload-container">
+                <input type="file" id="file-input" name="file" accept="image/*" required>
+                <label for="file-input" id="upload-label">Charger l'image</label>
+            </div>
+        </form>
+        
+        <!-- Canvas pour afficher l'image et les textes -->
+        <canvas id="canvas" class="canvas"></canvas>
+
+        <!-- Formulaire pour ajouter du texte -->
+        <form id="text-form">
+            <label for="text">Ajouter du texte :</label>
+            <input type="text" id="text" name="text">
+            <button type="button" id="add-text">Ajouter</button>
+        </form>
+
+        <!-- Bouton pour enregistrer l'image -->
+        <div class="save-buttons">
+            <button id="save-image">Enregistrer l'image</button>
+        </div>
+
+        <!-- Galerie des memes -->
+        <div id="gallery">
+            <h2>Galerie des mèmes</h2>
+            <div id="memes-container" class="memes-grid"></div>
+        </div>
+    </div>
+
+    <!-- la librairie Fabric.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+
+    <!-- script JavaScript -->
+    <script src="static/js/script.js"></script>
+
+</body>
+</html>
